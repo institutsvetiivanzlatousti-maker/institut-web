@@ -1,12 +1,13 @@
 # Decap CMS – urednik stranice Instituta Sveti Ivan Zlatousti
-# Prijava urednika: Netlify Identity + Git Gateway (vidi UPUTE.md).
+# Urednik: Sveltia CMS. Prijava GitHub ključem (Sign in with Token), vidi UPUTE.md.
 backend:
-  name: git-gateway
+  name: github
+  repo: institutsvetiivanzlatousti-maker/institut-web
   branch: main
 
 locale: hr
-site_url: https://institut-zlatousti.hr   # PROMIJENITI na stvarnu domenu
-display_url: https://institut-zlatousti.hr
+site_url: https://institutsvetiivanzlatousti.netlify.app
+display_url: https://institutsvetiivanzlatousti.netlify.app
 logo_url: /img/znak.png
 
 media_folder: uploads

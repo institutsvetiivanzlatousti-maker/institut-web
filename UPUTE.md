@@ -6,25 +6,30 @@
 |---|---|
 | `index.html` | Cijela stranica: naslovnica, Studij (`#studij-duhovnosti`), Privatnost (`#privatnost`) |
 | `content/sadrzaj.json` | Sav promjenjivi sadržaj: novosti, događanja, projekti, fotografije, obavijesti, raspored, predavači, društvene mreže |
-| `admin/` | Urednik sadržaja (Decap CMS), dostupan na `vasadomena.hr/admin/` |
+| `admin/` | Urednik sadržaja (Sveltia CMS), dostupan na `…netlify.app/admin/` |
 | `uploads/` | Fotografije koje urednici dodaju kroz urednik |
 | `favicon.svg`, `og-image.png` | Ikona stranice i slika za dijeljenje na Facebooku i WhatsAppu |
 | `robots.txt`, `sitemap.xml` | Za tražilice |
 
-## Prije objave: zamijenite domenu
+## Adresa stranice
 
-Na svim mjestima zamijenite `https://institut-zlatousti.hr` stvarnom domenom:
-`index.html` (oznake u zaglavlju), `admin/config.yml`, `robots.txt`, `sitemap.xml`.
+Stranica je podešena na `https://institutsvetiivanzlatousti.netlify.app`. Ako kasnije uzmete vlastitu domenu, zamijenite tu adresu u `index.html` (oznake u zaglavlju), `admin/config.yml`, `robots.txt` i `sitemap.xml`.
 
-## Objava na Netlifyju (besplatno za ovakvu stranicu)
+## Objava (GitHub + Netlify)
 
-1. Napravite besplatan račun na **github.com** i novi repozitorij (npr. `institut-web`). Učitajte sve datoteke iz ovog paketa.
-2. Napravite račun na **netlify.com** → *Add new site → Import an existing project* → odaberite repozitorij. Build naredba ostaje prazna, a mapa za objavu je korijen (`/`).
-3. U Netlifyju: *Site configuration → Identity → Enable Identity*.
-4. Pod *Identity → Registration* odaberite **Invite only**, kako se ne bi mogao registrirati bilo tko.
-5. Pod *Identity → Services → Git Gateway* kliknite **Enable Git Gateway**.
-6. Pod *Identity → Invite users* pozovite e-adrese urednika. Svaki urednik dobije e-poruku, postavi lozinku i ulazi na `vasadomena.hr/admin/`.
-7. Domenu povežite pod *Domain management*. Netlify sam postavlja HTTPS.
+1. GitHub repozitorij: `institutsvetiivanzlatousti-maker/institut-web`. Na njegovoj stranici kliknite *uploading an existing file*, povucite **sadržaj** ove mape (ne ZIP) i kliknite **Commit changes**.
+2. U Netlifyju, projekt **institutsvetiivanzlatousti** → *Project configuration → Build & deploy → Link repository* → GitHub → `institut-web`. Build naredba ostaje prazna, mapa za objavu je korijen (`/`).
+3. Svaka promjena na GitHubu (i svako spremanje u uredniku) za minutu-dvije pojavi se na stranici.
+
+## Prijava urednika (GitHub ključ)
+
+Urednik je **Sveltia CMS** na adresi `…netlify.app/admin/`. Ne treba Netlify Identity.
+
+1. Na GitHubu: slika profila gore desno → **Settings** → na dnu lijevo **Developer settings** → **Personal access tokens** → **Fine-grained tokens** → **Generate new token**.
+2. Ime npr. `urednik-weba`, *Expiration* npr. 1 godina. Pod *Repository access* odaberite **Only select repositories** → `institut-web`.
+3. Pod *Permissions → Repository permissions* postavite **Contents: Read and write**. Kliknite **Generate token** i kopirajte ključ (počinje s `github_pat_`). Spremite ga na sigurno mjesto, GitHub ga više neće prikazati.
+4. Otvorite `…netlify.app/admin/`, kliknite **Sign In with Token**, zalijepite ključ. Preglednik vas pamti.
+5. Kad ključ istekne ili ga izgubite, napravite novi istim putem. Ključ nikome ne šaljite.
 
 ## Rubrike stranice
 
@@ -46,8 +51,7 @@ Prekidač **HR / EN** u zaglavlju mijenja jezik cijele stranice, a preglednik pa
 
 ## Ulaz za administratora
 
-- U podnožju je gumb **Prijava za administratore**, a urednik je i izravno na `vasadomena.hr/admin/`.
-- Prijavljeni administrator vidi u donjem lijevom kutu traku **Uredi stranicu / Odjava**. Posjetitelji je ne vide.
+- U podnožju je gumb **Prijava za administratore**, a urednik je i izravno na `…netlify.app/admin/`.
 
 ## Što se može uređivati
 
@@ -101,7 +105,7 @@ U uredniku postoje tri skupine:
 - Otvaranje `index.html` izravno s diska prikazuje ugrađeni početni sadržaj. Sadržaj iz `content/sadrzaj.json` učitava se tek kad je stranica na poslužitelju.
 - Google karta učitava se tek kad posjetitelj klikne „Prikaži kartu“, zbog GDPR-a.
 - Tekst o privatnosti napisan je prema stvarnom radu stranice. Prije objave neka ga pregleda osoba zadužena za zaštitu podataka.
-- Bez Netlifyja stranica radi na bilo kojem hostingu, ali urednik u `/admin/` tada treba drugi način prijave (npr. DecapBridge ili GitHub prijavu).
+- Stranica može raditi i na drugom hostingu; urednik i dalje radi jer sprema izravno na GitHub.
 
 ## Donacije i barkod
 
