@@ -1,0 +1,202 @@
+{
+  "pocetna": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s3": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s4": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s5": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "o_institutu": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s3": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s4": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "studij_duhovnosti": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s3": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s4": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s5": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s6": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s7": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s8": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "projekti": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s3": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "prica_pored_grica": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s3": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "novosti": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s3": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s4": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s5": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "dokumenti": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "donacije": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "kontakt": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  },
+  "privatnost": {
+    "s1": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    },
+    "s2": {
+      "slika": "",
+      "opis": "",
+      "opis_en": ""
+    }
+  }
+}

@@ -59,6 +59,7 @@ U uredniku postoje tri skupine:
 
 1. **Novosti, događanja, projekti, dokumenti…** (`content/sadrzaj.json`):
    - novosti, događanja, projekti (sa slikom i dužim opisom)
+   - uz novosti, događanja, obavijesti, predavače i objave u medijima može se dodati **slika**
    - **Institut i Studij u medijima**: arhiva poveznica na članke (naslov, godina, izvor, vrsta, poveznica); prikazuje se na stranici Novosti s pretraživanjem i filtrima
    - dokumenti (prenesite PDF ili upišite poveznicu)
    - vodstvo Instituta, fotogalerija
@@ -106,6 +107,10 @@ U uredniku postoje tri skupine:
 - Google karta učitava se tek kad posjetitelj klikne „Prikaži kartu“, zbog GDPR-a.
 - Tekst o privatnosti napisan je prema stvarnom radu stranice. Prije objave neka ga pregleda osoba zadužena za zaštitu podataka.
 - Stranica može raditi i na drugom hostingu; urednik i dalje radi jer sprema izravno na GitHub.
+
+## Slike u rubrikama
+
+U uredniku otvorite **Slike u rubrikama → Slike po stranicama**. Za svaku stranicu navedeni su svi odjeljci s tekstom; uz svaki možete učitati sliku i kratak opis (HR i EN). Na vrhu podstranica slika ide u pozadinu naslovnog dijela, na Naslovnici zamjenjuje križ u okviru, a u ostalim odjeljcima prikazuje se ispod naslova. Prazno polje znači da odjeljak ostaje bez slike.
 
 ## Donacije i barkod
 

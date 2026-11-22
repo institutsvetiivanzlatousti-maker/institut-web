@@ -34,6 +34,7 @@ collections:
               - {label: Kratki opis, name: description, widget: text}
               - {label: Kratki opis (EN), name: description_en, widget: text, required: false}
               - {label: Poveznica na cijelu vijest, name: url, widget: string, required: false, hint: "Puna adresa, npr. https://ika.hkm.hr/..."}
+              - {label: Slika, name: image, widget: image, required: false, hint: "Nije obavezno. JPEG, PNG ili WebP, najbolje do 1600 px širine."}
 
           - label: Događanja (uključujući Priča pored Griča)
             name: events
@@ -51,6 +52,7 @@ collections:
               - {label: Opis, name: description, widget: text, required: false}
               - {label: Opis (EN), name: description_en, widget: text, required: false}
               - {label: Poveznica, name: url, widget: string, required: false}
+              - {label: Slika, name: image, widget: image, required: false, hint: "Nije obavezno. JPEG, PNG ili WebP, najbolje do 1600 px širine."}
 
           - label: Institut i Studij u medijima
             name: media
@@ -64,6 +66,7 @@ collections:
               - {label: Kratki opis, name: description, widget: text, required: false}
               - {label: Kratki opis (EN), name: description_en, widget: text, required: false}
               - {label: Poveznica na objavu, name: url, widget: string, hint: "Puna adresa, npr. https://ika.hkm.hr/..."}
+              - {label: Slika, name: image, widget: image, required: false, hint: "Nije obavezno."}
 
           - label: Projekti
             name: projects
@@ -131,6 +134,7 @@ collections:
               - {label: Tekst, name: description, widget: text}
               - {label: Tekst (EN), name: description_en, widget: text, required: false}
               - {label: Poveznica, name: url, widget: string, required: false}
+              - {label: Slika, name: image, widget: image, required: false, hint: "Nije obavezno."}
 
           - label: Raspored Studija (kalendar nastave)
             name: schedule
@@ -160,6 +164,7 @@ collections:
               - {label: Kratki životopis, name: description, widget: text}
               - {label: Kratki životopis (EN), name: description_en, widget: text, required: false}
               - {label: Poveznica, name: url, widget: string, required: false}
+              - {label: Slika, name: image, widget: image, required: false, hint: "Nije obavezno."}
 
           - label: Predmeti Studija (plan nastave)
             name: courses
@@ -880,3 +885,351 @@ collections:
               - {label: "Prijava", name: prijava, widget: string, required: false, hint: "HR: Prijava za administratore"}
               - {label: "Prava", name: prava, widget: string, required: false, hint: "HR: Sva prava pridržana."}
               - {label: "Geslo", name: geslo, widget: string, required: false, hint: "HR: Vjera · Znanje · Tradicija"}
+
+  - name: slike
+    label: Slike u rubrikama
+    description: "Uz svaki odjeljak sa tekstom možete dodati sliku. Ako je polje prazno, odjeljak ostaje bez slike."
+    files:
+      - name: sve_slike
+        label: Slike po stranicama
+        file: content/slike.json
+        format: json
+        fields:
+          - label: "Naslovnica"
+            name: pocetna
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Baština koja nadahnjuje. Znanje koje povezuje. – slika u okviru"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Prostor susreta istočne kršćanske tradicije i suvremenog čovjeka. – slika u okviru"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "3. Učimo, istražujemo i čuvamo. – slika u odjeljku"
+                name: s3
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "4. Najnovije vijesti. – slika u odjeljku"
+                name: s4
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "5. Budimo povezani. – slika u odjeljku"
+                name: s5
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "O Institutu"
+            name: o_institutu
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Prostor susreta kršćanskoga Istoka i suvremenog čovjeka. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Kako smo nastali. – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "3. Zašto postojimo – slika u odjeljku"
+                name: s3
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "4. Tko vodi Institut. – slika u odjeljku"
+                name: s4
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Studij"
+            name: studij_duhovnosti
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Trogodišnji put kroz duhovnost kršćanskoga Istoka. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Znanje koje se živi. – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "3. Što se uči. – slika u odjeljku"
+                name: s3
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "4. Misija Studija i Vizija Studija – slika u odjeljku"
+                name: s4
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "5. Popis predmeta. – slika u odjeljku"
+                name: s5
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "6. Tko vodi Studij. – slika u odjeljku"
+                name: s6
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "7. Raspored i obavijesti. – slika u odjeljku"
+                name: s7
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "8. Zanima vas Studij? – slika u odjeljku"
+                name: s8
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Projekti"
+            name: projekti
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Ideje koje ostavljaju trag. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Popis projekata – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "3. Želite se uključiti? – slika u odjeljku"
+                name: s3
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Priča pored Griča"
+            name: prica_pored_grica
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Priča pored Griča. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Susret koji počinje pričom. – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "3. Nadolazeće večeri. – slika u odjeljku"
+                name: s3
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Novosti"
+            name: novosti
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Iz života Instituta. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Događanja. – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "3. Novosti. – slika u odjeljku"
+                name: s3
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "4. Institut i Studij u medijima. – slika u odjeljku"
+                name: s4
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "5. Fotogalerija. – slika u odjeljku"
+                name: s5
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Dokumenti"
+            name: dokumenti
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Javnost i transparentnost. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Popis dokumenata – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Donacije"
+            name: donacije
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Podržite rad Instituta. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Vaš dar postaje prostor susreta. – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Kontakt"
+            name: kontakt
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Otvoreni za susrete, pitanja i suradnju. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. Budimo u kontaktu. – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+          - label: "Privatnost"
+            name: privatnost
+            widget: object
+            collapsed: true
+            fields:
+              - label: "1. Privatnost i kolačići. – naslovni dio stranice (slika u pozadini)"
+                name: s1
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
+              - label: "2. 1. Voditelj obrade – slika u odjeljku"
+                name: s2
+                widget: object
+                collapsed: true
+                fields:
+                  - {label: Slika, name: slika, widget: image, required: false, hint: "JPEG, PNG ili WebP, najbolje do 2000 px širine."}
+                  - {label: "Opis slike (prikazuje se ispod slike)", name: opis, widget: string, required: false}
+                  - {label: "Opis slike (EN)", name: opis_en, widget: string, required: false}
