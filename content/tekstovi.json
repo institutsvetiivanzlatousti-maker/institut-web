@@ -105,7 +105,7 @@
     "podatak3": "Mjesto",
     "podatak3_vrijednost": "Grkokatoličko sjemenište, Zagreb",
     "podatak6": "Nositelj",
-    "podatak6_vrijednost": "Križevačka eparhija",
+    "podatak6_vrijednost": "Institut sveti Ivan Zlatousti u suradnji s Križevačka eparhija",
     "podatak4": "Završetak",
     "podatak4_vrijednost": "Diplomski rad uz mentorstvo",
     "podatak5": "Informacije",
@@ -288,7 +288,6 @@
     "iban": "HR6623600001103128578",
     "banka": "Zagrebačka banka",
     "model": "HR99",
-    "napomena": "Poziv na broj ostavite prazan · OIB primatelja 41214716365",
     "barkod_naziv": "Institut Sv. I. Zlatousti",
     "barkod_ulica": "Ul. sv. Ćirila i Metoda 1",
     "barkod_mjesto": "10000 Zagreb",
@@ -305,6 +304,7 @@
       "Donacija - Duhovni centar Sošice",
       "Donacija za Studij (SIKD)",
       "Donacija - sakralna baština"
-    ]
+    ],
+    "napomena": "Poziv na broj ostavite prazan · OIB primatelja 41214716365"
   }
 }
